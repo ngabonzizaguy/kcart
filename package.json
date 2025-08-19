@@ -1,0 +1,18 @@
+{
+  "name": "kcart",
+  "version": "0.1.0",
+  "description": "kcart — multi-vendor e-commerce & food delivery app scaffold",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "author": "ngabonzizaguy",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
