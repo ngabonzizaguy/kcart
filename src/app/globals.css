@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent-primary: #efa7a7;
+  --color-accent-secondary: #ffd972;
+  --color-support-1: #c7eae4;
+  --color-support-2: #a7e8bd;
+  --color-support-3: #fcbcb8;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+.card {
+  @apply rounded-xl shadow-soft bg-white;
+}
+
+.pill {
+  @apply rounded-full px-3 py-1 text-sm bg-gray-100 text-gray-700;
+}
+
+.btn-primary {
+  @apply bg-[color:var(--color-accent-primary)] text-black font-semibold rounded-xl px-4 py-2 shadow-soft;
+}
+
+.btn-secondary {
+  @apply bg-[color:var(--color-accent-secondary)] text-black font-semibold rounded-xl px-4 py-2 shadow-soft;
+}
+
