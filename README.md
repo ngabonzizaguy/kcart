@@ -52,3 +52,40 @@ export const API_CONFIG = {
   SENTRY_DSN: "https://examplePublicKey@o0.ingest.sentry.io/0"
 };
 ```
+
+---
+
+## 🚀 Quickstart
+1. Copy env file:
+   ```bash
+   cp .env.example .env.local
+   ```
+2. Install deps:
+   ```bash
+   npm install
+   ```
+3. Run dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open `http://localhost:3000`
+
+## 🔐 Environment
+- Test mode works out-of-the-box using mock API routes.
+- To enable live mode, set `MODE` in `src_config_api.ts` to `"live"` and provide real credentials in `.env.local`.
+- Update:
+  - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  - `STRIPE_SECRET`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+  - `MOMO_API_KEY`
+  - `SENTRY_DSN`
+
+## 📦 Deployment
+- Vercel:
+  - Import repo, set env vars from `.env.example`, deploy.
+- Docker (basic):
+  ```bash
+  docker build -t kcart .
+  docker run -p 3000:3000 --env-file .env.local kcart
+  ```
+
+See `PROJECT_OVERVIEW.md` and `docs/architecture.md` for more.
