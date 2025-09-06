@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>kcart – Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script type="module" src="./scripts/three-background.js" defer></script>
+  <script type="module" src="./scripts/ui.js" defer></script>
+  <script type="module" defer>
+    import { initThreeBackground } from './scripts/three-background.js';
+    import { initMicroInteractions, renderProfile, setupNavActive } from './scripts/ui.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      initThreeBackground('bg3d');
+      renderProfile();
+      initMicroInteractions();
+      setupNavActive(location.pathname);
+    });
+  </script>
+</head>
+<body>
+  <canvas id="bg3d"></canvas>
+  <header class="header">
+    <div class="header-inner">
+      <div class="title animate__animated animate__fadeInDown">Profile</div>
+      <div class="subtitle animate__animated animate__fadeInUp">Account settings & preferences</div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="profile-card"></section>
+  </main>
+  <nav class="tabbar">
+    <a href="index.html" class="animate__animated animate__fadeInUp"><span class="icon">🏠</span>Home</a>
+    <a href="explore.html" class="animate__animated animate__fadeInUp animate__delay-1s"><span class="icon">🧭</span>Explore</a>
+    <a href="wallet.html" class="animate__animated animate__fadeInUp animate__delay-2s"><span class="icon">💳</span>Wallet</a>
+    <a href="profile.html" class="animate__animated animate__fadeInUp animate__delay-3s"><span class="icon">👤</span>Profile</a>
+  </nav>
+</body>
+</html>

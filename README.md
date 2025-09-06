@@ -1,91 +1,61 @@
-# 🛒 kcart — App Design & Setup Guide
+# 🛒 kcart — iOS‑inspired Static Web UI + RN Skeleton
 
-A modern multi-vendor e-commerce & food delivery app, styled in iOS-19 design language, powered by Supabase, Stripe, Mobile Money (MoMo), and Sentry.
+This repository now ships a sleek, liquid‑glass iOS aesthetic front-end built with:
+- HTML5, SASS/CSS3, JavaScript
+- Anime.js and Animate.css for micro‑interactions
+- Three.js for subtle, interactive 3D backgrounds
+- React Native skeleton for mobile parity
 
-This document provides the design system, mock API setup, and reference rules so the app can be built consistently across all screens.
+All backend data is mocked with placeholders. Images sourced from Unsplash are royalty‑free and used as examples.
 
-## 🎨 Brand Design System
-**Colors**
-- Primary Accent:   #efa7a7
-- Secondary Accent: #ffd972
-- Support 1:        #c7eae4
-- Support 2:        #a7e8bd
-- Support 3:        #fcbcb8
-- Neutral:          white, black, system gray (adaptive)
-
-**Typography**
-- Font Family: SF Pro (Apple System Font)
-- Large Title: Bold — 34pt
-- Headline: Semibold — 17pt
-- Body: Regular — 15pt
-- Caption: Regular — 13pt
-
-**Shape & Elevation**
-- Border Radius: 16–24 (cards, buttons, sheets)
-- Shadows: Subtle, soft (iOS-native style)
-
-**Iconography**
-- System: SF Symbols (Apple icons)
-- Action Icons: Accent tinted
-- Neutral Icons: System gray
-
-## 📱 UI Patterns
-- Navigation: Bottom tab bar (Home, Explore, Wallet, Profile)
-- Primary Action: Floating Action Button (FAB)
-- Secondary Actions: Bottom sheets & contextual menus
-- Search: Sticky search bar + pill filters
-- Cards: Rounded, soft shadows, accent highlights
-- Lists: Smooth scroll, grouped sections, swipe actions
-
-## 🧪 Mock API Setup
-**config/api.ts**
-```ts
-export const API_CONFIG = {
-  MODE: "test", // "test" | "live"
-
-  SUPABASE_URL: "https://placeholder.supabase.co",
-  SUPABASE_KEY: "public-anon-key-placeholder",
-
-  STRIPE_SECRET: "sk_test_placeholder",
-  MOMO_API_KEY: "test-placeholder",
-
-  SENTRY_DSN: "https://examplePublicKey@o0.ingest.sentry.io/0"
-};
-```
-
----
-
-## 🚀 Quickstart
-1. Copy env file:
-   ```bash
-   cp .env.example .env.local
-   ```
-2. Install deps:
+## 🚀 Quickstart (Web)
+1. Install dependencies:
    ```bash
    npm install
    ```
-3. Run dev server:
+2. Build styles:
    ```bash
-   npm run dev
+   npm run build
    ```
-4. Open `http://localhost:3000`
+3. Start local server:
+   ```bash
+   npm start
+   ```
+4. Open `http://localhost:3000/web/index.html`
 
-## 🔐 Environment
-- Test mode works out-of-the-box using mock API routes.
-- To enable live mode, set `MODE` in `src_config_api.ts` to `"live"` and provide real credentials in `.env.local`.
-- Update:
-  - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-  - `STRIPE_SECRET`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
-  - `MOMO_API_KEY`
-  - `SENTRY_DSN`
+## 📁 Structure
+```
+web/
+  index.html         # Discover
+  explore.html       # Collections
+  vendor.html        # Vendor details & menu
+  cart.html          # Cart summary
+  wallet.html        # Wallet & orders
+  profile.html       # Profile & settings
+  styles/
+    _variables.scss
+    _base.scss
+    main.scss → main.css
+  scripts/
+    data.js          # Placeholder vendors/orders/menu
+    ui.js            # Rendering + micro-interactions
+    three-background.js
+  assets/images/
+    favicon.svg
+mobile/ (soon)
+```
 
-## 📦 Deployment
-- Vercel:
-  - Import repo, set env vars from `.env.example`, deploy.
-- Docker (basic):
-  ```bash
-  docker build -t kcart .
-  docker run -p 3000:3000 --env-file .env.local kcart
-  ```
+## 🧑‍🎨 Design Notes
+- Typography uses Apple System font stack for an iOS feel.
+- Cards, pills, and tab bar use glassmorphism with soft shadows.
+- Micro‑interactions powered by Anime.js; page entrances use Animate.css.
+- Background features gently floating translucent spheres via Three.js.
 
-See `PROJECT_OVERVIEW.md` and `docs/architecture.md` for more.
+## 📱 React Native (skeleton)
+A minimal RN skeleton will live under `mobile/` to mirror pages and styles.
+
+## 🔒 Backend & Payments
+Out of scope for this UI‑focused rebuild. All data is placeholder‑only.
+
+## 🖼️ Images
+Example images are from Unsplash (royalty‑free). Replace with your own assets before production.

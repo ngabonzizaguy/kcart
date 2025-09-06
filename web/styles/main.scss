@@ -1,0 +1,24 @@
+@import "variables";
+@import "base";
+
+// Page-specific light touches
+.hero {
+  position: relative;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 100%);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.floating { will-change: transform; }
+
+.badge-rating { @extend .pill; background: rgba(255, 229, 153, 0.95); }
+
+.list-item { @extend .card; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.list-item .meta { color: #6b7280; font-size: $font-size-caption; }
+
+.section-title { @extend .headline; }
+
+// Playful hover/tap states
+.list-item:hover { transform: translateY(-1px); transition: transform .2s ease; }
