@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0f0f12">
+    <title>kcart — Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <style>html{background:#0b0b10;}</style>
+</head>
+<body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="nav glass nav--primary animate__animated animate__fadeInDown">
+        <div class="nav__left">
+            <div class="brand">kcart</div>
+        </div>
+        <div class="nav__right">
+            <button class="pill pill--ghost">Sign in</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero animate__animated animate__fadeInUp">
+            <h1 class="title">Order from the best nearby</h1>
+            <p class="subtitle">Trending vendors and delicious picks curated for you.</p>
+
+            <div class="search glass">
+                <input type="text" placeholder="Search restaurants, cuisines, dishes" aria-label="Search"/>
+                <button class="pill">Search</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__head">
+                <h2 class="section__title">Featured Vendors</h2>
+                <a href="explore.html" class="link">See all</a>
+            </div>
+            <div id="vendor-grid" class="grid grid--cards"></div>
+        </section>
+
+        <button class="fab" aria-label="Open Cart" onclick="window.location='cart.html'">
+            <span>🛒</span>
+        </button>
+    </main>
+
+    <nav class="tabbar glass">
+        <a class="tab tab--active" href="index.html">Home</a>
+        <a class="tab" href="explore.html">Explore</a>
+        <a class="tab" href="wallet.html">Wallet</a>
+        <a class="tab" href="profile.html">Profile</a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="assets/js/data/placeholders.js"></script>
+    <script src="assets/js/ui/threebg.js"></script>
+    <script src="assets/js/ui/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+

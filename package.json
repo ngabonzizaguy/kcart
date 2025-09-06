@@ -4,33 +4,23 @@
   "description": "kcart — multi-vendor e-commerce & food delivery app",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p 3000",
-    "lint": "next lint",
-    "test": "vitest run"
+    "dev": "npm run web:dev",
+    "build": "npm run web:build",
+    "start": "npm run web:serve",
+    "lint": "echo 'No lint configured for static site'",
+    "test": "echo 'No tests configured'",
+    "web:dev": "sass --no-source-map --watch web/assets/scss/app.scss:web/assets/css/app.css",
+    "web:build": "sass web/assets/scss/app.scss web/assets/css/app.css --no-source-map --style=compressed",
+    "web:serve": "http-server web -p 3000 -c-1",
+    "mobile:start": "cd mobile && npx expo start"
   },
   "author": "ngabonzizaguy",
   "license": "MIT",
   "dependencies": {
-    "@sentry/nextjs": "^8.33.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.453.0",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "stripe": "^16.5.0"
+    
   },
   "devDependencies": {
-    "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^9.9.0",
-    "eslint-config-next": "^14.2.5",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "sass": "^1.77.6",
+    "http-server": "^14.1.1"
   }
 }
