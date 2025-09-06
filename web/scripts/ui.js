@@ -6,11 +6,11 @@ const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
 export function initMicroInteractions() {
   if (window.anime) {
-    anime.set('.stagger-in', { opacity: 0, translateY: 10 });
-    anime({ targets: '.stagger-in', opacity: [0, 1], translateY: [10, 0], easing: 'easeOutQuad', duration: 600, delay: anime.stagger(60, { start: 100 }) });
+    anime.set('.stagger-in', { opacity: 0, translateY: 12, scale: 0.98 });
+    anime({ targets: '.stagger-in', opacity: [0, 1], translateY: [12, 0], scale: [0.98, 1], easing: 'easeOutElastic(1, .6)', duration: 900, delay: anime.stagger(70, { start: 80 }) });
     $$('[data-tap]').forEach((el) => {
       el.addEventListener('click', () => {
-        anime({ targets: el, scale: [1, 0.98, 1], duration: 220, easing: 'easeOutQuad' });
+        anime({ targets: el, scale: [1, 0.96, 1.02, 1], duration: 420, easing: 'easeOutElastic(1, .7)' });
       });
     });
   }
@@ -170,7 +170,8 @@ export function setupNavActive(pathname) {
     const href = a.getAttribute('href');
     if (href && pathname.endsWith(href)) {
       a.style.opacity = '1';
-      a.style.fontWeight = '600';
+      a.style.fontWeight = '700';
+      a.classList.add('active');
     } else {
       a.style.opacity = '0.7';
     }

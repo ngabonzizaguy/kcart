@@ -7,8 +7,8 @@ body {
   margin: 0;
   font-family: $font-stack;
   color: $color-neutral-8;
-  background: radial-gradient(1200px 800px at 50% -200px, rgba(255,255,255,0.6), rgba(255,255,255,0) 60%),
-              linear-gradient(180deg, #f9fafc 0%, #eef1f5 100%);
+  background: radial-gradient(1200px 800px at 50% -200px, rgba(255,255,255,0.65), rgba(255,255,255,0) 60%),
+              linear-gradient(180deg, #fdf7ff 0%, #eef6ff 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +32,7 @@ body {
 .pill {
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.85);
   border: 1px solid rgba(0,0,0,0.06);
   font-size: $font-size-caption;
 }
@@ -53,11 +53,11 @@ body {
 }
 .btn-primary {
   @extend .btn;
-  background: linear-gradient(180deg, lighten($color-primary, 2%) 0%, $color-primary 100%);
+  background: linear-gradient(180deg, lighten($color-primary, 8%) 0%, $color-primary 100%);
   color: #1c1c1e;
-  box-shadow: 0 10px 24px rgba(239, 167, 167, 0.35);
+  box-shadow: 0 12px 28px rgba(239, 167, 167, 0.45);
 }
-.btn-primary:active { transform: translateY(1px) scale(0.995); }
+.btn-primary:active { transform: translateY(1px) scale(0.98); }
 .btn-secondary {
   @extend .btn;
   background: rgba(255,255,255,0.75);
@@ -71,7 +71,8 @@ body {
   @extend .glass;
   border-radius: 20px 20px 0 0;
 }
-.tabbar a { text-decoration: none; color: inherit; font-size: 12px; text-align: center; flex: 1; }
+.tabbar a { text-decoration: none; color: inherit; font-size: 12px; text-align: center; flex: 1; transition: transform .2s ease, opacity .2s ease; }
+.tabbar a.active { transform: translateY(-2px); }
 .tabbar .icon { display: block; margin: 0 auto 4px; width: 24px; height: 24px; }
 
 .grid { display: grid; gap: 12px; }

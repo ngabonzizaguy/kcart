@@ -21,19 +21,24 @@ export function initThreeBackground(canvasId = 'bg3d') {
   scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
   const spheres = [];
-  const palette = [0xefa7a7, 0xffd972, 0xc7eae4, 0xa7e8bd, 0xfcbcb8];
-  const geometry = new THREE.SphereGeometry(1, 32, 32);
-  for (let i = 0; i < 6; i++) {
+  const palette = [0xefa7a7, 0xffd972, 0xc7eae4, 0xa7e8bd, 0xfcbcb8, 0xbad6ff];
+  const geometries = [
+    new THREE.SphereGeometry(1, 32, 32),
+    new THREE.TetrahedronGeometry(0.9, 0),
+    new THREE.IcosahedronGeometry(0.9, 0),
+  ];
+  for (let i = 0; i < 8; i++) {
     const material = new THREE.MeshStandardMaterial({
       color: palette[i % palette.length],
-      roughness: 0.4,
-      metalness: 0.2,
+      roughness: 0.35,
+      metalness: 0.25,
       transparent: true,
-      opacity: 0.35,
+      opacity: 0.38,
     });
+    const geometry = geometries[i % geometries.length];
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.set((Math.random() - 0.5) * 8, (Math.random() - 0.5) * 6, (Math.random() - 0.5) * 4);
-    mesh.scale.setScalar(0.8 + Math.random() * 0.8);
+    mesh.scale.setScalar(0.8 + Math.random() * 0.9);
     scene.add(mesh);
     spheres.push(mesh);
   }
@@ -51,9 +56,10 @@ export function initThreeBackground(canvasId = 'bg3d') {
   function animate() {
     t += 0.003;
     spheres.forEach((s, idx) => {
-      s.rotation.x += 0.001 + idx * 0.0002;
-      s.rotation.y -= 0.001 + idx * 0.00015;
-      s.position.y += Math.sin(t + idx) * 0.002;
+      s.rotation.x += 0.002 + idx * 0.00025;
+      s.rotation.y -= 0.0015 + idx * 0.0002;
+      s.position.y += Math.sin(t * 1.2 + idx) * 0.003;
+      s.position.x += Math.cos(t * 0.8 + idx) * 0.0015;
     });
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
