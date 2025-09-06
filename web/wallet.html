@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>kcart – Wallet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script type="module" src="./scripts/three-background.js" defer></script>
+  <script type="module" src="./scripts/ui.js" defer></script>
+  <script type="module" defer>
+    import { initThreeBackground } from './scripts/three-background.js';
+    import { initMicroInteractions, renderWallet, setupNavActive } from './scripts/ui.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      initThreeBackground('bg3d');
+      renderWallet();
+      initMicroInteractions();
+      setupNavActive(location.pathname);
+    });
+  </script>
+</head>
+<body>
+  <canvas id="bg3d"></canvas>
+  <header class="header">
+    <div class="header-inner">
+      <div class="title">Wallet</div>
+      <div class="subtitle">Manage your payments</div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="card" style="padding:16px">
+      <div style="display:flex; align-items:baseline; justify-content:space-between">
+        <span class="meta">Available Balance</span>
+        <span class="pill" style="background:rgba(255,229,153,0.8)">Test Mode</span>
+      </div>
+      <div id="wallet-balance" class="title" style="margin-top:8px">$0.00</div>
+      <div style="display:flex; gap:8px; margin-top:12px">
+        <button class="btn-primary" data-tap>Add Funds</button>
+        <button class="btn-secondary" data-tap>Withdraw</button>
+      </div>
+    </section>
+
+    <h2 class="section-title" style="margin:16px 0 8px">Recent Orders</h2>
+    <section id="recent-orders" class="grid grid-1"></section>
+  </main>
+  <nav class="tabbar">
+    <a href="index.html"><span class="icon">🏠</span>Home</a>
+    <a href="explore.html"><span class="icon">🧭</span>Explore</a>
+    <a href="wallet.html"><span class="icon">💳</span>Wallet</a>
+    <a href="profile.html"><span class="icon">👤</span>Profile</a>
+  </nav>
+</body>
+</html>

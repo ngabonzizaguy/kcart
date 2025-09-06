@@ -1,0 +1,42 @@
+// Brand Colors
+$color-primary: #efa7a7;
+$color-secondary: #ffd972;
+$color-support-1: #c7eae4;
+$color-support-2: #a7e8bd;
+$color-support-3: #fcbcb8;
+$color-neutral-0: #ffffff;
+$color-neutral-1: #f6f7f9;
+$color-neutral-2: #eef1f5;
+$color-neutral-7: #3a3a3c;
+$color-neutral-8: #1c1c1e;
+$color-neutral-9: #0a0a0a;
+
+// Typography
+$font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+$font-size-body: 15px;
+$font-size-caption: 13px;
+$font-size-headline: 17px;
+$font-size-title: 28px;
+$font-size-large-title: 34px;
+
+// Shape & Elevation
+$radius-md: 16px;
+$radius-lg: 24px;
+$shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+$shadow-subtle: 0 6px 18px rgba(0,0,0,0.06);
+
+// Layout
+$container-padding-x: 16px;
+$section-spacing: 24px;
+$max-content-width: 720px;
+
+// Glass
+$glass-bg-light: rgba(255, 255, 255, 0.32);
+$glass-border: rgba(255, 255, 255, 0.35);
+$glass-bg-dark: rgba(20, 20, 22, 0.32);
+$glass-border-dark: rgba(255, 255, 255, 0.12);
+
+// Breakpoints
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>kcart – Discover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    #bg3d { position: fixed; inset: 0; z-index: 0; }
+    main { position: relative; z-index: 1; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script type="module" src="./scripts/data.js" defer></script>
+  <script type="module" src="./scripts/three-background.js" defer></script>
+  <script type="module" src="./scripts/ui.js" defer></script>
+  <script type="module" defer>
+    import { initThreeBackground } from './scripts/three-background.js';
+    import { initMicroInteractions, renderHome, setupNavActive } from './scripts/ui.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      initThreeBackground('bg3d');
+      renderHome();
+      initMicroInteractions();
+      setupNavActive(location.pathname);
+    });
+  </script>
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/images/favicon.svg" />
+  <meta name="description" content="iOS-inspired kcart UI – discover vendors and more." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+</head>
+<body>
+  <canvas id="bg3d"></canvas>
+  <header class="header">
+    <div class="header-inner">
+      <div class="title">Discover</div>
+      <div class="subtitle">Food and groceries from top vendors</div>
+    </div>
+  </header>
+  <main class="container">
+    <div style="display:flex; gap:8px; overflow:auto; padding-bottom:8px" class="animate__animated animate__fadeIn">
+      <button class="pill" data-tap>All</button>
+      <button class="pill" data-tap>Food</button>
+      <button class="pill" data-tap>Grocery</button>
+      <button class="pill" data-tap>Pharmacy</button>
+      <button class="pill" data-tap>Deals</button>
+    </div>
+
+    <section id="vendor-list" class="grid grid-1" style="margin-top:12px"></section>
+  </main>
+  <nav class="tabbar">
+    <a href="index.html"><span class="icon">🏠</span>Home</a>
+    <a href="explore.html"><span class="icon">🧭</span>Explore</a>
+    <a href="wallet.html"><span class="icon">💳</span>Wallet</a>
+    <a href="profile.html"><span class="icon">👤</span>Profile</a>
+  </nav>
+</body>
+</html>

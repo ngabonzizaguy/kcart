@@ -1,36 +1,18 @@
 {
   "name": "kcart",
-  "version": "0.1.0",
-  "description": "kcart — multi-vendor e-commerce & food delivery app",
+  "version": "0.2.0",
+  "description": "kcart — iOS-inspired static web UI with Three.js & Anime.js + RN skeleton",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p 3000",
-    "lint": "next lint",
-    "test": "vitest run"
+    "dev": "serve web -l 3000 -s",
+    "build": "sass web/styles/main.scss web/styles/main.css --style=compressed",
+    "start": "serve web -l 3000 -s"
   },
   "author": "ngabonzizaguy",
   "license": "MIT",
-  "dependencies": {
-    "@sentry/nextjs": "^8.33.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.453.0",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "stripe": "^16.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^9.9.0",
-    "eslint-config-next": "^14.2.5",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "sass": "^1.77.6",
+    "serve": "^14.2.1"
   }
 }

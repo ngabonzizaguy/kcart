@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>kcart – Vendor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script type="module" src="./scripts/three-background.js" defer></script>
+  <script type="module" src="./scripts/ui.js" defer></script>
+  <script type="module" defer>
+    import { initThreeBackground } from './scripts/three-background.js';
+    import { initMicroInteractions, renderVendor, setupNavActive } from './scripts/ui.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      initThreeBackground('bg3d');
+      renderVendor();
+      initMicroInteractions();
+      setupNavActive(location.pathname);
+    });
+  </script>
+</head>
+<body>
+  <canvas id="bg3d"></canvas>
+  <header class="header">
+    <div class="header-inner">
+      <div class="title">Vendor</div>
+      <div class="subtitle">Menu and details</div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="vendor-header"></section>
+    <h2 class="section-title" style="margin:16px 0 8px">Menu</h2>
+    <section id="vendor-menu" class="grid grid-1"></section>
+  </main>
+  <nav class="tabbar">
+    <a href="index.html"><span class="icon">🏠</span>Home</a>
+    <a href="explore.html"><span class="icon">🧭</span>Explore</a>
+    <a href="wallet.html"><span class="icon">💳</span>Wallet</a>
+    <a href="profile.html"><span class="icon">👤</span>Profile</a>
+  </nav>
+</body>
+</html>
