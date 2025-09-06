@@ -1,0 +1,9 @@
+.glass { @include glass-surface(0.08); }
+.hidden { display: none !important; }
+.chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.chip { @extend .pill; white-space: nowrap; }
+
+.tabbar .tab { display: grid; gap: 4px; justify-items: center; align-content: center; }
+.tabbar .tab i { font-size: 18px; }
+.tabbar .tab span { font-size: 12px; }
+
