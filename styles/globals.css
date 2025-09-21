@@ -1,0 +1,588 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  
+  /* DeliGo Color Scheme - Cream & Orange */
+  --background: #fefdf8;
+  --foreground: #2d2a24;
+  --card: rgba(255, 255, 255, 0.85);
+  --card-foreground: #2d2a24;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #2d2a24;
+  
+  /* Orange Primary Colors */
+  --primary: #f97316;
+  --primary-foreground: #ffffff;
+  --secondary: #fed7aa;
+  --secondary-foreground: #9a3412;
+  
+  /* Muted Colors */
+  --muted: rgba(251, 248, 240, 0.8);
+  --muted-foreground: #78716c;
+  --accent: rgba(254, 215, 170, 0.3);
+  --accent-foreground: #9a3412;
+  
+  /* Success Green */
+  --success: #22c55e;
+  --success-foreground: #ffffff;
+  
+  /* Destructive */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  /* Borders & Input */
+  --border: rgba(251, 146, 60, 0.2);
+  --input: transparent;
+  --input-background: rgba(255, 255, 255, 0.7);
+  --switch-background: #cbd5e1;
+  
+  /* Other */
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(249, 115, 22, 0.3);
+  --radius: 0.75rem;
+  
+  /* Sidebar */
+  --sidebar: rgba(255, 255, 255, 0.9);
+  --sidebar-foreground: #2d2a24;
+  --sidebar-primary: #f97316;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(254, 215, 170, 0.5);
+  --sidebar-accent-foreground: #9a3412;
+  --sidebar-border: rgba(251, 146, 60, 0.3);
+  --sidebar-ring: rgba(249, 115, 22, 0.3);
+
+  /* Glass Effect Variables */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  /* Chart colors */
+  --chart-1: #f97316;
+  --chart-2: #22c55e;
+  --chart-3: #3b82f6;
+  --chart-4: #a855f7;
+  --chart-5: #ef4444;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #fafafa;
+  --card: rgba(38, 38, 38, 0.85);
+  --card-foreground: #fafafa;
+  --popover: rgba(38, 38, 38, 0.95);
+  --popover-foreground: #fafafa;
+  --primary: #fb923c;
+  --primary-foreground: #1a1a1a;
+  --secondary: #78716c;
+  --secondary-foreground: #fafafa;
+  --muted: rgba(38, 38, 38, 0.8);
+  --muted-foreground: #a8a29e;
+  --accent: rgba(120, 113, 108, 0.3);
+  --accent-foreground: #fafafa;
+  --border: rgba(120, 113, 108, 0.2);
+  --input: rgba(38, 38, 38, 0.7);
+  --ring: rgba(251, 146, 60, 0.3);
+  --sidebar: rgba(38, 38, 38, 0.9);
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #fb923c;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: rgba(120, 113, 108, 0.5);
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: rgba(120, 113, 108, 0.3);
+  --glass-bg: rgba(38, 38, 38, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 text-foreground min-h-screen;
+  }
+}
+
+/* Glass morphism utility classes */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  /* Hide scrollbars for mobile-friendly experience while maintaining scrolling functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Ensure scrolling still works on touch devices */
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Aggressive scrollbar hiding for vendor dashboard */
+  .vendor-dashboard-container {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .vendor-dashboard-container::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Force hide scrollbars on all tab content */
+  [data-slot="tabs-content"] {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  
+  [data-slot="tabs-content"]::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Global mobile scrollbar override for the entire app */
+  * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Ensure touch scrolling works properly on all mobile devices */
+  * {
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Enhanced scrollable areas with better touch support */
+  .scrollable-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Enable momentum scrolling on iOS */
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    /* Prevent scroll chaining for contained scrolling */
+    overscroll-behavior-y: contain;
+    /* Add slight inertia for natural feel */
+    scroll-snap-type: none;
+  }
+  
+  .scrollable-y::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom thin scrollbar inspired by popular apps */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(249, 115, 22, 0.4) transparent;
+    /* Enable smooth momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent scroll chaining */
+    overscroll-behavior: contain;
+    /* Optimize for mobile touch */
+    touch-action: pan-y;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 1.5px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.4);
+    border-radius: 1.5px;
+    transition: all 0.2s ease;
+    min-height: 20px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.6);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:active {
+    background: rgba(249, 115, 22, 0.8);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Professional short scrollbar thumb for VendorProfile */
+  .professional-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(249, 115, 22, 0.3) transparent;
+    /* Enable smooth momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent scroll chaining */
+    overscroll-behavior: contain;
+    /* Optimize for mobile touch */
+    touch-action: pan-y;
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 1px;
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.3);
+    border-radius: 1px;
+    transition: all 0.15s ease;
+    min-height: 8px;
+    max-height: 12px;
+    /* Make the thumb very short for professional feel */
+    height: 8px;
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.5);
+    transform: scaleX(1.2);
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar-thumb:active {
+    background: rgba(249, 115, 22, 0.7);
+  }
+  
+  .professional-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Cream/beige scrollbar for reviews - matches second image design */
+  .reviews-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(222, 184, 135, 0.8) rgba(245, 245, 220, 0.3);
+    /* Enable smooth momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent scroll chaining */
+    overscroll-behavior: contain;
+    /* Optimize for mobile touch */
+    touch-action: pan-y;
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar-track {
+    background: rgba(245, 245, 220, 0.3);
+    border-radius: 3px;
+    margin: 4px 0;
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(222, 184, 135, 0.8);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    min-height: 20px;
+    border: 1px solid rgba(210, 180, 140, 0.5);
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(210, 180, 140, 0.9);
+    border: 1px solid rgba(205, 175, 135, 0.7);
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar-thumb:active {
+    background: rgba(205, 175, 135, 1);
+    border: 1px solid rgba(200, 170, 130, 0.8);
+  }
+  
+  .reviews-scrollbar::-webkit-scrollbar-corner {
+    background: rgba(245, 245, 220, 0.3);
+  }
+
+  .scrollable-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
+  
+  .scrollable-x::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Ensure touch targets are properly sized for mobile scrolling */
+  .touch-scroll {
+    /* Enable touch scrolling with proper momentum */
+    -webkit-overflow-scrolling: touch;
+    /* Contain overscroll for better mobile UX */
+    overscroll-behavior: contain;
+    /* Enhance touch responsiveness */
+    touch-action: pan-y;
+    /* Optimize scroll performance */
+    will-change: scroll-position;
+    /* Add slight bounce effect on iOS */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Explicit font size override for vendor dashboard */
+  .explicit-font-size {
+    font-size: 1rem !important;
+  }
+  
+  .explicit-font-size.text-xs {
+    font-size: 0.75rem !important;
+  }
+  
+  .explicit-font-size.text-sm {
+    font-size: 0.875rem !important;
+  }
+  
+  .explicit-font-size.text-base {
+    font-size: 1rem !important;
+  }
+  
+  .explicit-font-size.text-lg {
+    font-size: 1.125rem !important;
+  }
+  
+  .explicit-font-size.text-xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .explicit-font-size.text-2xl {
+    font-size: 1.5rem !important;
+  }
+
+  /* Professional bottom spacing for mobile dashboards */
+  .dashboard-bottom-spacing {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  /* Professional spacing for buttons at the bottom */
+  .bottom-button-spacing {
+    margin-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  /* Content container with professional spacing */
+  .professional-content-spacing {
+    padding-bottom: calc(32px + env(safe-area-inset-bottom));
+  }
+
+  .touch-scroll-x {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: auto;
+    touch-action: pan-x pan-y;
+  }
+
+  /* Drone tracking optimized scrolling - buttery smooth mobile experience */
+  .drone-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(249, 115, 22, 0.2) transparent;
+    /* Optimize for mobile performance */
+    will-change: scroll-position;
+    transform: translateZ(0);
+    /* Prevent unwanted horizontal scroll */
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: contain;
+    /* Enhanced touch responsiveness */
+    touch-action: pan-y;
+    /* Smooth deceleration curve */
+    scroll-behavior: smooth;
+    /* Reduce reflow during scrolling */
+    contain: layout style paint;
+  }
+  
+  .drone-scroll::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  .drone-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .drone-scroll::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.2);
+    border-radius: 1px;
+    transition: background 0.2s ease;
+  }
+  
+  .drone-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.4);
+  }
+
+  /* Safe area utilities for mobile devices */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .h-safe-bottom {
+    height: env(safe-area-inset-bottom);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .pl-safe {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .pr-safe {
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Bottom navigation responsive spacing */
+  .bottom-nav-spacing {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 1.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      color: var(--foreground);
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+    }
+
+    input {
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+      color: var(--foreground);
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
