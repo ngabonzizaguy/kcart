@@ -4,7 +4,7 @@
 
 ### The Problem with `view_tool` (Historical Context)
 
-Previous AI coding agents, such as Figma's Make AI, faced significant limitations with the `view_tool`—a utility that truncated large file views, often displaying only partial content with `<response clipped>`. This led to challenges such as incomplete file edits, integration issues, and code duplication due to the inability to see or modify full files easily.
+Previous AI coding agents, such as Figma's Make AI, faced significant limitations with the `view_tool`—a utility that truncated large file views, often displaying only partial content with `<respons[...]`
 
 ### Why This Is No Longer an Issue
 
@@ -15,7 +15,7 @@ With modern AI coding agents like Cursor and similar advanced tools, these file 
 - **Reliable Integration**: Imports, exports, state management, and integration points can all be handled holistically.
 - **Reduced Duplication**: You can accurately identify and update existing implementations without accidentally creating redundant code.
 
-**Legacy workarounds for truncated files (multiple targeted views, temporary files, etc.) are now obsolete.** However, some temporary or backup files may still exist in the codebase as a result of past limitations—see below for clean-up recommendations.
+**Legacy workarounds for truncated files (multiple targeted views, temporary files, etc.) are now obsolete.** However, some temporary or backup files may still exist in the codebase as a result of pas[...]
 
 ---
 
@@ -142,7 +142,16 @@ Customer UI ← Real-time Updates ← Shared Data ← Vendor Action
 - Cream background: `bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100`
 - Glass cards: `bg-white/80 backdrop-blur-sm rounded-3xl border border-white/20`
 - Orange CTAs: `bg-orange-500 hover:bg-orange-600`
-- Mobile-first: 393x852 viewport with safe areas
+- **Mobile-first:** Support and test these viewports (width x height, in pixels):
+  - 393x852
+  - 412x917
+  - 700x840
+  - 402x874
+  - 440x956
+  - 430x932
+  - 320x568
+
+- Use safe areas for all mobile UIs
 
 ### 4. Feature Flag System
 ```typescript
