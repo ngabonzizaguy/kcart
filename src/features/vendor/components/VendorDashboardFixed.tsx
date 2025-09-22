@@ -1,3 +1,29 @@
+/**
+ * Consolidated from legacy variants; see PR-B for deletions.
+ * 
+ * VendorDashboard - MVP Revenue-Focused Design with WORKING Sticky Header & Pagination
+ * 
+ * Core Features for Revenue Generation:
+ * - Real-time order management with instant status updates
+ * - Quick accept/reject flow with one-tap actions
+ * - Live preparation tracking with countdown timers
+ * - Customer communication integration
+ * - Today's revenue and performance metrics
+ * - Business status control for availability management
+ * - Enhanced menu management with inline category creation
+ * 
+ * Design: DeliGo Glass Design Language
+ * - Warm glassmorphism with cream/orange palette
+ * - Mobile-first with 44px touch targets
+ * - Professional spacing with safe area support
+ * - Clean, focused interface for quick decisions
+ * 
+ * FIXED: Sticky Header & Pagination
+ * - Header with stats and filters stays at top during scroll ✅
+ * - Pagination controls remain visible at bottom ✅
+ * - Smooth scrolling experience for order management ✅
+ */
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../../components/ui/button';
 import { Badge } from '../../../components/ui/badge';
@@ -8,7 +34,7 @@ import { Textarea } from '../../../components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../../../components/ui/dialog';
 import { ImageWithFallback } from '../../../components/figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { 
   Package2, 
@@ -42,7 +68,6 @@ import {
   PieChart as PieChartIcon,
   Calendar,
   Users,
-  Eye,
   MapPin,
   FileText,
   Building2
