@@ -5,11 +5,11 @@ import { ScreenRenderer } from '../../../shared/components/common/ScreenRenderer
 import { RedesignedAIAssistant } from './ai/RedesignedAIAssistant';
 // MIGRATED: Components now available from new structure (handled by ScreenRenderer)
 // TEMPORARY: Import remaining components from old structure until migrated
-import { AIFeaturesNavigator } from '../../../../components/AIFeaturesNavigator';
+import { AIFeaturesNavigator } from '@legacy/AIFeaturesNavigator';
 import { AddedToCartModal } from './cart/AddedToCartModal';
-import { EnhancedOrderTrackingModal } from '../../../../components/EnhancedOrderTrackingModal';
-import { LiveTrackingMap } from '../../../../components/LiveTrackingMap';
-import { DroneDeliveryVisualization } from '../../../../components/DroneDeliveryVisualization';
+import { EnhancedOrderTrackingModal } from '@legacy/EnhancedOrderTrackingModal';
+import { LiveTrackingMap } from '@legacy/LiveTrackingMap';
+import { DroneDeliveryVisualization } from '@legacy/DroneDeliveryVisualization';
 import { motion, AnimatePresence } from 'motion/react';
 // FEATURE FLAGS: Import feature flag hooks for conditional rendering
 import { useFeatureFlag, useMultipleFeatureFlags } from '../../../shared/hooks/useFeatureFlag';

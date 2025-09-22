@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Clock, CheckCircle, Package, XCircle, Plane, Zap } from 'lucide-react';
 import { Button } from '../../../../shared/components/ui/button';
-import { Badge } from '../../../../../components/ui/badge';
+import { Badge } from '@legacy/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../../shared/components/ui/tabs';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../../../../lib/figma/ImageWithFallback';

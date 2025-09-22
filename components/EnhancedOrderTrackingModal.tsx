@@ -118,7 +118,6 @@ export function EnhancedOrderTrackingModal({
       trackingId: 'Tracking ID',
       arriving: 'Arriving in',
       onTheWay: 'Your order is on the way!',
-      viewFullMap: 'View Full Map',
       fullMapDesc: 'Immersive tracking experience'
     },
     rw: {
@@ -151,7 +150,6 @@ export function EnhancedOrderTrackingModal({
       trackingId: 'Nomero yo Gukurikirana',
       arriving: 'Bizagera mu',
       onTheWay: 'Ibisabwa byawe biri mu nzira!',
-      viewFullMap: 'Reba Ikarita Yose',
       fullMapDesc: 'Ubunararibonye bwo gukurikirana'
     }
   };

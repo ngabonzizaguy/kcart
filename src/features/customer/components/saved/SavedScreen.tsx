@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Heart, Search } from 'lucide-react';
 import { Input } from '../../../../shared/components/ui/input';
-import { Badge } from '../../../../components/ui/badge';
+import { Badge } from '@legacy/ui/badge';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from '../../../../lib/figma/ImageWithFallback';
 

@@ -11,7 +11,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Dialog
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { VendorDashboardMenuSectionFixed } from './VendorDashboardMenuSectionFixed';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { 
   Store, 
   Clock, 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '../../../../shared/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '../../../../shared/components/ui/dialog';
 import { Check, ShoppingCart } from 'lucide-react';
-import { ImageWithFallback } from '../../../../../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '@legacy/figma/ImageWithFallback';
 import { motion, AnimatePresence } from 'motion/react';
 import { VisuallyHidden } from '../../../../shared/components/ui/visually-hidden';
 import type { CartItem } from '../../../../types';

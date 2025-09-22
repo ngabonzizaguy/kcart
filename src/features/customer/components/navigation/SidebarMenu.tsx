@@ -13,10 +13,10 @@ import {
   Users
 } from 'lucide-react';
 import { Button } from '../../../../shared/components/ui/button';
-import { Separator } from '../../../../../components/ui/separator';
-import { Switch } from '../../../../../components/ui/switch';
+import { Separator } from '@legacy/ui/separator';
+import { Switch } from '@legacy/ui/switch';
 import { motion } from 'motion/react';
-import { LanguageSelectionModal } from '../../../../../components/LanguageSelectionModal';
+import { LanguageSelectionModal } from '@legacy/LanguageSelectionModal';
 import type { Screen } from '../../../../types';
 
 interface SidebarMenuProps {

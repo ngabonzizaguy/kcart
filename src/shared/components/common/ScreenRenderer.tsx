@@ -8,21 +8,21 @@ import { HomeScreen } from '../../../features/customer/components/home/HomeScree
 import { OrdersScreen } from '../../../features/customer/components/orders/OrdersScreen';
 import { OrderTracking } from '../../../features/customer/components/orders/OrderTracking';
 import { CheckoutScreen } from '../../../features/customer/components/checkout/CheckoutScreen';
-import { NotificationsScreen } from '../../../../components/NotificationsScreen';
+import { NotificationsScreen } from '@legacy/NotificationsScreen';
 import { SavedScreen } from '../../../features/customer/components/saved/SavedScreen';
-import { PopularRestaurantsScreen } from '../../../../components/PopularRestaurantsScreen';
-import { NearbyRestaurantsScreen } from '../../../../components/NearbyRestaurantsScreen';
-import { VendorProfile } from '../../../../components/VendorProfile';
-import { ProductDetail } from '../../../../components/ProductDetail';
-import { CategoryPage } from '../../../../components/CategoryPage';
-import { MenuCategoryPage } from '../../../../components/MenuCategoryPage';
-import { ChatHistoryScreen } from '../../../../components/ChatHistoryScreen';
-import { AIChatScreen } from '../../../../components/AIChatScreen';
-import { LoyaltyRewardsScreen } from '../../../../components/LoyaltyRewardsScreen';
-import { ReferralsScreen } from '../../../../components/ReferralsScreen';
-import { OrderConfirmationScreen } from '../../../../components/OrderConfirmationScreen';
-import { AISettings } from '../../../../components/AISettings';
-import { BlockchainCenter } from '../../../../components/BlockchainCenter';
+import { PopularRestaurantsScreen } from '@legacy/PopularRestaurantsScreen';
+import { NearbyRestaurantsScreen } from '@legacy/NearbyRestaurantsScreen';
+import { VendorProfile } from '@legacy/VendorProfile';
+import { ProductDetail } from '@legacy/ProductDetail';
+import { CategoryPage } from '@legacy/CategoryPage';
+import { MenuCategoryPage } from '@legacy/MenuCategoryPage';
+import { ChatHistoryScreen } from '@legacy/ChatHistoryScreen';
+import { AIChatScreen } from '@legacy/AIChatScreen';
+import { LoyaltyRewardsScreen } from '@legacy/LoyaltyRewardsScreen';
+import { ReferralsScreen } from '@legacy/ReferralsScreen';
+import { OrderConfirmationScreen } from '@legacy/OrderConfirmationScreen';
+import { AISettings } from '@legacy/AISettings';
+import { BlockchainCenter } from '@legacy/BlockchainCenter';
 
 import type { Screen, User, CartItem, Order } from '../../../types';
 

@@ -11,8 +11,8 @@ import {
   Heart
 } from 'lucide-react';
 import { Button } from '../../../../shared/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '../../../../../components/ui/sheet';
-import { Badge } from '../../../../../components/ui/badge';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@legacy/ui/sheet';
+import { Badge } from '@legacy/ui/badge';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface AIAssistantOption {
