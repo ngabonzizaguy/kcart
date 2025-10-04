@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -140,11 +144,13 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--border);
+    outline-color: var(--ring);
   }
 
   body {
-    @apply bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 text-foreground min-h-screen;
+    @apply bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 min-h-screen;
+    color: var(--foreground);
   }
 }
 

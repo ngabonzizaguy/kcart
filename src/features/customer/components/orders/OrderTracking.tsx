@@ -4,8 +4,8 @@ import { Badge } from '../../../../shared/components/ui/badge';
 import { ArrowLeft, Star, Clock, Phone, MessageSquare, RefreshCw, Package, Truck, Check, X, MapPin, User, CreditCard, Smartphone, Banknote, Info, AlertTriangle, Heart, RotateCcw, ChefHat, Navigation, Plane } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../../../shared/components/ui/tooltip';
 import { ImageWithFallback } from '../../../../lib/figma/ImageWithFallback';
-import { ReviewPrompt } from '../../../../../components/ReviewPrompt';
-import { ReviewsModal } from '../../../../../components/ReviewsModal';
+import { ReviewPrompt } from '@legacy/ReviewPrompt';
+import { ReviewsModal } from '@legacy/ReviewsModal';
 // FEATURE FLAGS: Import feature flag hooks for conditional rendering
 import { useFeatureFlag, useMultipleFeatureFlags } from '../../../../shared/hooks/useFeatureFlag';
 

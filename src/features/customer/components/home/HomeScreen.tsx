@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from '../../../../shared/components/ui/button';
-import { Badge } from '../../../../../components/ui/badge';
+import { Badge } from '@legacy/ui/badge';
 import { Input } from '../../../../shared/components/ui/input';
-import { PopularRestaurantsCarousel } from '../../../../../components/PopularRestaurantsCarousel';
-import { LocationSelector } from '../../../../../components/LocationSelector';
+import { PopularRestaurantsCarousel } from '@legacy/PopularRestaurantsCarousel';
+import { LocationSelector } from '@legacy/LocationSelector';
 
 
 import { 

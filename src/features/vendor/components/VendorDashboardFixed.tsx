@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '../../../components/ui/button';
-import { Badge } from '../../../components/ui/badge';
-import { Card, CardContent } from '../../../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../components/ui/tabs';
-import { Input } from '../../../components/ui/input';
-import { Textarea } from '../../../components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../components/ui/select';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../../../components/ui/dialog';
-import { ImageWithFallback } from '../../../components/figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { Button } from '@legacy/ui/button';
+import { Badge } from '@legacy/ui/badge';
+import { Card, CardContent } from '@legacy/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@legacy/ui/tabs';
+import { Input } from '@legacy/ui/input';
+import { Textarea } from '@legacy/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@legacy/ui/select';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@legacy/ui/dialog';
+import { ImageWithFallback } from '@legacy/figma/ImageWithFallback';
+import { toast } from 'sonner';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { 
   Package2, 
@@ -47,7 +47,7 @@ import {
   FileText,
   Building2
 } from 'lucide-react';
-import { VendorProfileManager } from '../../../components/VendorProfileManager';
+import { VendorProfileManager } from '@legacy/VendorProfileManager';
 
 /**
  * VendorDashboard - MVP Revenue-Focused Design with WORKING Sticky Header & Pagination

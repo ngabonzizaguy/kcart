@@ -594,27 +594,27 @@ export function VendorProfile({
   const [showShareModal, setShowShareModal] = useState(false);
 
   // Use the complete vendor data - merge provided vendor with defaults
-  const finalVendorData = vendor ? {
-    ...defaultVendorData,
-    ...vendor,
-    image: "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwaW50ZXJpb3J8ZW58MXx8fHwxNzU1OTcyNjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    rating: 4.8,
-    reviewCount: 150,
-    deliveryTime: '25-35',
-    distance: '2.1',
-    phone: '+250 788 123 456',
-    description: {
-      en: 'Authentic local and international cuisine prepared with fresh ingredients. Known for our signature grilled dishes and friendly service.',
-      rw: 'Ibiryo by\'igihugu n\'amahanga byateguwe n\'ibikoresho bishya. Tuzwiho ibiryo by\'akalanga n\'ubukangurambaga.'
-    },
-    categories: ['Local Dishes', 'Grilled', 'International'],
-    isOpen: true,
-    // Ensure critical properties have fallbacks
-    categories: vendor?.categories || defaultVendorData.categories,
-    description: vendor?.description || defaultVendorData.description,
-    menuItems: vendor?.menuItems || defaultVendorData.menuItems,
-    reviews: vendor?.reviews || defaultVendorData.reviews
-  } : defaultVendorData;
+  const baseVendorData = vendor
+    ? {
+        ...defaultVendorData,
+        ...vendor,
+      }
+    : defaultVendorData;
+
+  const finalVendorData = {
+    ...baseVendorData,
+    image: vendor?.image ?? defaultVendorData.image,
+    rating: vendor?.rating ?? defaultVendorData.rating,
+    reviewCount: vendor?.reviewCount ?? defaultVendorData.reviewCount,
+    deliveryTime: vendor?.deliveryTime ?? defaultVendorData.deliveryTime,
+    distance: vendor?.distance ?? defaultVendorData.distance,
+    phone: vendor?.phone ?? defaultVendorData.phone,
+    description: vendor?.description ?? defaultVendorData.description,
+    categories: vendor?.categories ?? defaultVendorData.categories,
+    menuItems: vendor?.menuItems ?? defaultVendorData.menuItems,
+    reviews: vendor?.reviews ?? defaultVendorData.reviews,
+    isOpen: vendor?.isOpen ?? defaultVendorData.isOpen,
+  };
 
   const formatPrice = (price: number) => {
     return `${price.toLocaleString()} RWF`;
@@ -711,10 +711,10 @@ export function VendorProfile({
       aiRecommendationTitle: 'AI Recommended for You',
       aiRecommendationSubtitle: 'Based on your preferences and popular items',
       viewAllItems: 'View All Items',
-      showLess: 'Show Less',
+      showLessItems: 'Show Less',
       showingItems: 'Showing',
       ofItems: 'of',
-      items: 'items'
+      itemsLabel: 'items'
     },
     rw: {
       reviews: 'amasuzuma',

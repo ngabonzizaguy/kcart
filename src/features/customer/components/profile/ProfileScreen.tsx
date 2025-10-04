@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowLeft, Edit, User, Phone, Mail, Star, Award, Calendar, MessageSquare, History, ChevronRight } from 'lucide-react';
 import { Button } from '../../../../shared/components/ui/button';
 import { Input } from '../../../../shared/components/ui/input';
-import { Label } from '../../../../../components/ui/label';
+import { Label } from '@legacy/ui/label';
 import type { User as UserType } from '../MainApp';
 
 /**
